@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://use.fontawesome.com/c83eb13304.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="ihover/src/ihover.css" rel="stylesheet">
+
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            background-color: grey;
+            position: relative;
+            z-index: -1;
+        }
+
+        .navbar {
+
+            border: 0px;
+            top-margin: 0px;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .navbar .navbar-brand {
+
+            font-weight: 600;
+
+            padding-left: 10px;
+            padding-right: 30px;
+            letter-spacing: 1px;
+        }
+
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .parallax {
+            ;
+            /* image */
+            background-image: url("http://i.imgur.com/iiH6WS8.jpg");
+
+            /* Full height */
+            height: 100%;
+            margin-top: -20px;
+            /*scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 150px 0 10px 0;
+        }
+
+        .nav-tabs {
+            margin-top: 20px;
+            padding-left: 450px;
+            text-align: center;
+            border-bottom: 0px;
+        }
+
+        .tab-content>.active {
+            display: block;
+            padding-left: 360px;
+            margin-left: 5px;
+        }
+
+        input {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            font-family: 'Catamaran', sans-serif;
+            width: 30px;
+            height: 30px;
+            padding-left: 30px;
+        }
+
+        .btn {
+
+            margin-bottom: 60px;
+        }
+
+        .ih-item.circle {
+            margin-top: 40px;
+            margin-left: 100px;
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+        }
+
+
+
+        .h4,
+        h4 {
+          margin-left: 10px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .navbar-right{
+          font-size: 20px;
+        }
+.button{
+
+     text-align: center;
+     font-size: 30px;
+     padding-left: 90px;
+     margin: 10px;
+
+}
+    </style>
+</head>
+
+<!--body start-->
+
+<body>
+
+    <!--navbar start-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">CAR DEALS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#about">ABOUT</a></li>
+                    <li><a href="#what">WHAT WE DO</a></li>
+                    <li><a href="#model">TOP MODELS</a></li>
+                    <li><a href="#packages">FREE PACKAGES</a></li>
+                    <li><a href="#feedback">FEEDBACK</a></li>
+                    <li><a href="#team">TEAM</a></li>
+                    <li><a href="#number">NUMBERS</a></li>
+                    <li><a href="#place">CONTACT</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"  aria-hidden="true"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--nav end-->
+
+
+    <!--paralax start-->
+    <div class="parallax">
+
+        <h1>FIND THE RIGHT CAR</h1>
+
+
+        <div class="container">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">NEW CARS</a></li>
+                <li><a data-toggle="tab" href="#menu1">USED CAR</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <input type="text>" placeholder="CAR NAME">
+
+                    <button type="button" class="btn btn-danger" style="margin-top:55px">SEARCH</button>
+
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <input type="text>" placeholder="CAR NAME">
+                    <input type="text>" placeholder="CHOOSE YOUR BUDGET">
+                    <button type="button" class="btn btn-danger" style="margin-top:55px">SEARCH</button>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!--paralax ends-->
+
+    <!--abouts start-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <h6>CAR MELLA</h6>
+            <div style="color:orange; padding: 0px 0px 30px 0px;">
+                <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+            <hr>
+            <h3>Welcome to Car Mella - India's largest auto media vehicle.</h3>
+        </div>
+
+
+
+
+        <div class="bgimg1 section section-we-are-1 text-center" id="about" style="background:url(" http://www.pizzeriaberga.se/style/images/art/bg5.jpg ")";>
+            <br><br>
+            <div class="text-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="title" id="animationTest">
+
+                            <h6>ABOUT US</h6>
+                            <div style="color:orange; padding: 0px 0px 30px 0px;">
+                                <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                        </div>
+                        <hr>
+                        <p>
+                            Car MELLA has always striven to serve car buyers and owners in the most comprehensive and convenient way possible. We provide a platform where car buyers and owners can research, buy, sell and come together to discuss and talk about their cars.</p>
+                        <div class="col-md-4">
+                            <img src="" class="about">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--about end-->
+
+        <!--what we do starts-->
+
+
+        <div class="bgimg2 section section-we-do-2 text-center" id="what">
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="title add-animation">
+                        <h6>WHAT WE DO </h6>
+                        <div style="color: orange; padding: 0px 0px 30px 0px;">
+                            <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                    </div>
+                    <hr>
+                    <div class="col-md-4">
+                        <div class="connect">
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                        </div>
+
+
+                        <h2>CREATE UI TOOLS</h2>
+                        <p>
+                            We have created the tools that will help you in your next design project. From plugins to complex kits, we've got you covered in all areas regarding front-end development.
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="connect">
+                            <i class="fa fa-gift" aria-hidden="true"></i>
+                        </div>
+                        <h2>SHARE FREEBIES</h2>
+                        <p>
+                            Everything that we used to create our platform can be downloaded for free and guess what, people love free stuff. People have already trusted and used them in thousands of sites.
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <div class="connect">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <h2>POWER HACKATHONS</h2>
+                        <p>
+                            We've sponsored many hackathons around the world with the tools that they need to make awesome web applications. We like to help where we can, and our tools go hand in hand with startups.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--what we do end-->
+
+        <!-- TOP MODEL start-->
+
+        <div class="bgimg3 section section-we-are-1 text-center" id="model">
+            <br><br>
+            <div class="text-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="title" id="animationTest">
+                            <h6>OUR TOP MODELS</h6>
+                            <div style="color: orange; padding: 0px 0px 30px 0px;">
+                                <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                        </div>
+                        <hr>
+                        <h3>Check out the most popular models from our platform. We would love to hear your feedback.</h3>
+                        <h2>JUST LAUNCHED</h2>
+
+
+                        <div class="col-md-4" style="background:black;color:white">
+
+                            <img src="img/model.jpg" class="img-rounded prodover" alt="Cinque Terre" width="301" height="310" style="margin: 20px;">
+                            <h2>Maruti suzuki lgnis </h2>
+                            <p>
+the Ignis is the third Maruti Suzuki product to be sold via Nexa dealerships after the S-Cross and Baleno. The Nexa website has already listed the model as 'upcoming', without divulging anything about specifications.       </P>
+                            <button type="button" class="btn btn-success">VIEW</button>
+                            <button type="button" class="btn btn-primary">MORE DETAILS</button>
+                        </div>
+
+;
+                        <div class="col-md-4" style="background:rgb(224, 116, 17);color:black;">
+
+                            <img src="img/model1.jpg" class="img-rounded prodover" alt="Cinque Terre" width="308" height="236" style="margin: 20px;">
+                            <h2>Maruti suzuki baleeno</h2>
+                            <P>
+                              The Baleno RS has been priced at Rs 8.69 lakh and is available exclusively through the Nexa outlets. The new Baleno RS gets a 1.0 litre petrol engine. The turbo petrol Baleno RS makes 101 bhp and 150 Nm of peak torque.
+                            </P>
+                            <button type="button" class="btn btn-success">VIEW</button>
+                            <button type="button" class="btn btn-primary">MORE DETAILS</button>
+                        </div>
+                        <div class="col-md-4" style="background:blue;color:white;">
+
+                            <img src="img/model2.jpg" class="img-rounded prodover" alt="Cinque Terre" width="308" height="248" style="margin: 20px;">
+                            <h2>Maruti suzuki swift</h2>
+                            <p> new Suzuki Swift on the web, Suzuki revealed the third generation of all new Swift on 27th December 2016, in Japan. In its home country, the new generation Swift was introduced between a price of 1.34 million Yen (INR 7.78 lakh)
+                            </p>
+                            <button type="button" class="btn btn-success">VIEW</button>
+                            <button type="button" class="btn btn-primary">MORE DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--top model end-->
+
+                <!--up coming model start-->
+
+                <div class="container" >
+                    <div class="row">
+                        <h2>UP COMING MODELS</h2>
+                        <div class="col-md-4" style="background:rgb(124, 125, 121);color:white;">
+
+                             <img src="img/upcoming.jpg" class="img-rounded prodover" alt="Cinque Terre" width="308" height="250" style="margin: 20px;">
+                            <h2>Honda WR-V</h2>
+                            <P>
+                                The new Honda WRV compact crossover made its debut at the Sao Paula Motor Show last year. As per Honda, the name ‘WRV’ is an acronym for ‘Winsome Runabout Vehicle’. Internationally, the new Honda WRV will replace the Fit Twist.
+                                                      </P>
+                            <button type="button" class="btn btn-success">LIVE VIEW</button>
+                            <button type="button" class="btn btn-primary">FREE DOWNLOAD</button>
+                        </div>
+
+
+                        <div class="col-md-4" style="background:rgb(106, 9, 108);color:black;">
+
+                              <img src="img/upcoming1.jpg" class="img-rounded prodover" alt="Cinque Terre" width="308" height="248" style="margin: 20px;">
+
+                            <h2>TATA Nexon</h2>
+                            <p>
+                              Tata Nexon was revealed at the 13th edition of the biennial Delhi Auto Expo early last year to keep the ball rolling for the Indian auto maker in bringing an all-new product intended at the sub-compact SUV segment.</p>
+                            <button type="button" class="btn btn-success">LIVE VIEW</button>
+                            <button type="button" class="btn btn-primary">FREE DOWNLOAD</button>
+                        </div>
+
+                        <div class="col-md-4" style="background:green;color:white;">
+
+                              <img src="img/upcoming2.jpg" class="img-rounded prodover" alt="Cinque Terre" width="315" height="260" style="margin: 10px;">
+                            <h2>TATA tigor</h2>
+                            <p>
+                              The new Honda WRV compact crossover made its debut at the Sao Paula Motor Show last year. As per Honda, the name ‘WRV’ is an acronym for ‘Winsome Runabout Vehicle’. Internationally, the new Honda WRV will replace the Fit Twist.
+                              </p>
+                            <button type="button" class="btn btn-success">LIVE VIEW</button>
+                            <button type="button" class="btn btn-primary">FREE DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--up coming model end-->
+
+        <!-- SERVICES start-->
+
+        <div class="bgimg4 section section-we-do-2 text-center" id="packages" style="margin-bottom:100px;">
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="title add-animation">
+
+                        <h6>FREE PACKAGES</h6>
+                        <div style="color: orange; padding: 0px 0px 30px 0px;">
+                            <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                    </div>
+                    <hr>
+                    <h3>Check out these packages, they will increaces yours car efficiency sure!</h3>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <img src="" class="pack_img">
+                <h2>INTERNAL MODIFICAYION</h2>
+                <p>
+                    Start Your Development With A Badass Bootstrap UI Kit inspired by Material Design. If you like Google's Material Design, you will love this kit! More Details
+
+                </p>
+                <button type="button" class="btn btn-info">More Detail</button>
+            </div>
+
+
+            <div class="col-md-4">
+                <img src="" class="pack_img">
+                <h2>FREE TRANSPORT</h2>
+                <p>
+                    Gaia is a multi-page Bootstrap Template designed to be easy to use and stylish. If you are trying to create a new website, presentation page or blog, this is definitely a great fit for you.
+
+                </p>
+
+                <button type="button" class="btn btn-info">More Detail</button>
+            </div>
+
+            <div class="col-md-4">
+                <img src="" class="pack_img">
+                <h2> FREE SERVICE</h2>
+                <p>
+                    Light Bootstrap Dashboard PRO is a Bootstrap Admin Theme designed to look simple and beautiful. It comes integrated with a large number of plugins redesigned to fit in with the rest of the elements.
+
+                </p>
+                <button type="button" class="btn btn-info">More Detail</button>
+            </div>
+        </div>
+
+        <!--service end-->
+
+        <!--feedback start-->
+        <div class="bgimg5 section section-we-do-2 text-center" id="feedback">
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="title add-animation">
+
+                        <h6>FEEDBACK</H6>
+                        <div style="color: orange; padding: 0px 0px 30px 0px;">
+                            <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                    </div>
+
+
+
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+
+                            <!-- colored -->
+                            <div class="ih-item circle colored effect16 left_to_right">
+                                <a href="#">
+                                    <div class="img"><img src="img/g1.jpeg" alt="img"></div>
+                                    <div class="info">
+                                        <h3>SURYA</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end colored -->
+
+
+
+                        </div>
+
+                        <div id="menu1" class="tab-pane fade">
+                            <!-- colored -->
+                            <div class="ih-item circle colored effect16 left_to_right">
+                                <a href="#">
+                                    <div class="img"><img src="img/g1.jpeg" alt="img"></div>
+                                    <div class="info">
+                                        <h3>EMILY</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- end colored -->
+
+
+
+
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+
+                            <!-- colored -->
+                            <div class="ih-item circle colored effect16 left_to_right">
+                                <a href="#">
+                                    <div class="img"><img src="img/g1.jpeg" alt="img"></div>
+                                    <div class="info">
+                                        <h3>SAM</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- end colored -->
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">SURYA</a></li>
+                            <li><a data-toggle="tab" href="#menu1">EMILEY</a></li>
+                            <li><a data-toggle="tab" href="#menu2">SAM</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FEEDBACK END-->
+
+        <!--OUR TEAM STARTS-->
+   <div id="team">
+
+        <div class="row">
+            <h6>OUR TEAM</h6>
+            <div style="color:orange; padding: 0px 0px 30px 0px;">
+                <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+
+            <hr>
+
+            <div class="col-md-3">
+
+   <!-- colored -->
+   <div class="ih-item circle colored effect10 bottom_to_top"><a href="#">
+       <div class="img"><img src="img/team1.JPG" alt="team_img"></div>
+       <div class="info">
+         <h3 style="font-family: 'Source Sans Pro', sans-serif;font-size:20px;">RAHUL SAINI</h3>
+         <p style="font-size:25px;">CEO</p>
+       </div></a></div>
+   <!-- end colored -->
+
+
+<!-- end Bottom to top-->
+<div class="button">
+
+
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+
+                    </div>
+
+            </div>
+
+            <div class="col-md-3">
+              <!-- colored -->
+  <div class="ih-item circle colored effect13 from_left_and_right"><a href="#">
+      <div class="img"><img src="img/team2.JPG" alt="img"></div>
+      <div class="info">
+        <div class="info-back">
+          <h3 style="font-family: 'Dancing Script', cursive;font-size:20px;">NAMAN AGGARWAL</h3>
+          <p style="font-size:20px;">HEAD OF MODIFICATION DEPARTMENT</p>
+        </div>
+      </div></a></div>
+              <!-- end colored -->
+                <div class="button">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+              <!-- colored -->
+              <div class="ih-item circle colored effect15 left_to_right"><a href="#">
+       <div class="img"><img src="img/team3.JPG" alt="img"></div>
+       <div class="info">
+         <h3 style="font-family: 'Dancing Script', cursive;font-size:20px;">KASHISH SINGAL</h3>
+         <p  style="font-size:25px;">TECHNICAL ADVISOR</p>
+       </div></a></div>
+              <!-- end colored -->
+                <div class="button">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+              <!-- normal -->
+     <div class="ih-item circle effect17"><a href="#">
+         <div class="img"><img src="img/team4.JPEG"alt="img"></div>
+         <div class="info">
+           <h3 style="font-family: 'Dancing Script', cursive;font-size:15px;">AKSHIT ARORA</h3>
+           <p style="font-size:25px;">MEDIA PARTNER'S</p>
+         </div></a></div>
+     <!-- end normal -->
+                <div class="button">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+</div>
+        <!--OUR TEAM END-->
+
+        <!--number start-->
+<div id="number">
+
+
+        <div class="row">
+            <h6>NUMBER DOESN'T LIES</h6>
+            <div style="color: orange; padding: 0px 0px 30px 0px;">
+                <h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+            <h3>"Started from the bottom now we're here"</h3>
+            <hr>
+            <div class="col-md-4">
+                <h2>USERS</h2>
+                <h3>people visited</h3>
+                <h6>26,544+</h6>
+            </div>
+
+            <div class="col-md-4">
+                <h2>DEALS</h2>
+                <h3>cars buy and sold</h3>
+                <h6>2,000+</h6>
+            </div>
+            <div class="col-md-4">
+                <h2>COUNTRY</h2>
+                <h3>where we buy and sell car</h3>
+                <h6>14</h6>
+            </div>
+        </div>
+    </div>
+
+    <!--number end-->
+
+    <!--contact us start-->
+    <div class="bgimg6 section section-we-are-1 text-center" id="place">
+                          <br><br>
+                                 <div class="text-area">
+                                     <div class="container">
+                                         <div class="row">
+                                             <div class="title" id="animationTest">
+
+                                                    <h6>WHERE WE MEET</h6>
+                                                     <div  style="color: Orange; padding: 0px 0px 30px 0px;"><h4>__________ &nbsp;&nbsp;&nbsp;<sub><sub>∎</sub></sub>&nbsp;&nbsp;&nbsp; __________</h4></div>
+                                                </div>
+                                                    <h4 style="line-height: 30px;">
+                                                          “N-81, Barakhamba Road, Block N, Cannaught Place,<br>
+                                                          Block N, Connaught Place, New Delhi,<br>
+                                                          Delhi-110001”
+                                                      </h4>
+
+                              <!-- google Map Start From Here -->
+                                                <div id="map"></div>
+                                                           <script>
+                                                             function initMap() {
+                                                               var uluru = {lat: 28.631195, lng: 77.222053};
+                                                               var map = new google.maps.Map(document.getElementById('map'), {
+                                                                 zoom: 7,
+                                                                 center: uluru
+                                                               });
+                                                               var marker = new google.maps.Marker({
+                                                                 position: uluru,
+                                                                 map: map
+                                                               });
+                                                             }
+                                                           </script>
+                                                           <script async defer
+                                                           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVKMKV_duSAYgmuKXOr6X9jHOEVDRTpYQ&callback=initMap">
+                                                           </script>
+                                   <!-- google Map EndHere -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
